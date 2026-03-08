@@ -7,7 +7,14 @@
    <GlobalVariableEntity>
       <description></description>
       <initValue>'http://localhost:5173/register'</initValue>
-      <name>baseUrl</name>
+      <name>baseUrlRegister</name>
+      <protected>false</protected>
+      <valueType>STRING</valueType>
+   </GlobalVariableEntity>
+   <GlobalVariableEntity>
+      <description></description>
+      <initValue>'http://localhost:5173/login'</initValue>
+      <name>baseUrlLogin</name>
       <protected>false</protected>
       <valueType>STRING</valueType>
    </GlobalVariableEntity>
