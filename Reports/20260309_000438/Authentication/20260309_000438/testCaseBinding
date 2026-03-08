@@ -1,0 +1,13 @@
+{"testCaseName":"Test Cases/Register_Function/TC005_All_Fields_Empty","testCaseId":"Test Cases/Register_Function/TC005_All_Fields_Empty","iterationVariableName":""}
+{"testCaseName":"Test Cases/Register_Function/TC002_Invalid_Fullname","testCaseId":"Test Cases/Register_Function/TC002_Invalid_Fullname","iterationVariableName":""}
+{"testCaseName":"Test Cases/Register_Function/TC003_Invalid_Email","testCaseId":"Test Cases/Register_Function/TC003_Invalid_Email","iterationVariableName":""}
+{"testCaseName":"Test Cases/Register_Function/TC004_Invalid_Password","testCaseId":"Test Cases/Register_Function/TC004_Invalid_Password","iterationVariableName":""}
+{"testCaseName":"Test Cases/Register_Function/TC006_Email_Already_Exists","testCaseId":"Test Cases/Register_Function/TC006_Email_Already_Exists","iterationVariableName":""}
+{"testCaseName":"Test Cases/Register_Function/TC001_Register_Success","testCaseId":"Test Cases/Register_Function/TC001_Register_Success","iterationVariableName":""}
+{"testCaseName":"Test Cases/Login_Function/TC003_Empty_Email_And_Password","testCaseId":"Test Cases/Login_Function/TC003_Empty_Email_And_Password","iterationVariableName":""}
+{"testCaseName":"Test Cases/Login_Function/TC005_Empty_Email","testCaseId":"Test Cases/Login_Function/TC005_Empty_Email","iterationVariableName":""}
+{"testCaseName":"Test Cases/Login_Function/TC004_Empty_Password","testCaseId":"Test Cases/Login_Function/TC004_Empty_Password","iterationVariableName":""}
+{"testCaseName":"Test Cases/Login_Function/TC002_Invalid_Email_Format","testCaseId":"Test Cases/Login_Function/TC002_Invalid_Email_Format","iterationVariableName":""}
+{"testCaseName":"Test Cases/Login_Function/TC006_Password_Below_Min_Length","testCaseId":"Test Cases/Login_Function/TC006_Password_Below_Min_Length","iterationVariableName":""}
+{"testCaseName":"Test Cases/Login_Function/TC007_Incorrect_Password","testCaseId":"Test Cases/Login_Function/TC007_Incorrect_Password","iterationVariableName":""}
+{"testCaseName":"Test Cases/Login_Function/TC001_Login_Success","testCaseId":"Test Cases/Login_Function/TC001_Login_Success","iterationVariableName":""}

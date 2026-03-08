@@ -1,0 +1,158 @@
+2026-03-09 00:04:42.799 INFO  c.k.k.c.l.logback.LogbackConfigurator    - Logback default configuration initialized from: C:\Users\admin\.katalon\packages\KSE-10.4.3\configuration\org.eclipse.osgi\133\0\.cp\resources\logback\logback-execution.xml
+2026-03-09 00:04:42.805 INFO  c.k.k.c.l.logback.LogbackConfigurator    - Logback custom configuration initialized from: C:\Users\admin\Katalon Studio\allinone_automation\Include\config\log.properties
+2026-03-09 00:04:44.288 INFO  c.k.katalon.core.main.TestSuiteExecutor  - START Test Suites/Authentication
+2026-03-09 00:04:44.394 INFO  c.k.katalon.core.main.TestSuiteExecutor  - userFullName = Coor Chang
+2026-03-09 00:04:44.396 INFO  c.k.katalon.core.main.TestSuiteExecutor  - projectName = allinone_automation
+2026-03-09 00:04:44.397 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostName = admin - pnvl164.pn.com.vn
+2026-03-09 00:04:44.397 INFO  c.k.katalon.core.main.TestSuiteExecutor  - os = Windows 10 64bit
+2026-03-09 00:04:44.398 INFO  c.k.katalon.core.main.TestSuiteExecutor  - hostAddress = 186.186.22.94
+2026-03-09 00:04:44.400 INFO  c.k.katalon.core.main.TestSuiteExecutor  - katalonVersion = 10.4.3.0
+2026-03-09 00:04:45.072 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2026-03-09 00:04:45.072 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/Register_Function/TC005_All_Fields_Empty
+2026-03-09 00:04:45.568 DEBUG testcase.TC005_All_Fields_Empty          - 1: baseUrl = baseUrlRegister
+2026-03-09 00:04:45.683 DEBUG testcase.TC005_All_Fields_Empty          - 2: openBrowser("")
+2026-03-09 00:04:46.030 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2026-03-09 00:04:46.111 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Mar 09, 2026 12:04:47 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 145, returning the closest version; found: 142; Please update to a Selenium version that supports CDP version 145
+2026-03-09 00:04:48.535 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = 88686902cd5d9142186efec614f3aed4
+2026-03-09 00:04:48.537 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 145.0.7632.160
+2026-03-09 00:04:48.538 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 10
+2026-03-09 00:04:48.538 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.34.0
+2026-03-09 00:04:48.549 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2026-03-09 00:04:48.617 DEBUG testcase.TC005_All_Fields_Empty          - 3: navigateToUrl(baseUrl)
+2026-03-09 00:04:49.592 DEBUG testcase.TC005_All_Fields_Empty          - 4: click(findTestObject("Object Repository/Register_Function/btn_Register"))
+2026-03-09 00:04:50.299 DEBUG testcase.TC005_All_Fields_Empty          - 5: verifyElementText(findTestObject("Object Repository/Register_Function/err_FullName"), "Full Name is required")
+2026-03-09 00:04:50.728 DEBUG testcase.TC005_All_Fields_Empty          - 6: verifyElementText(findTestObject("Object Repository/Register_Function/err_Email"), "Email is required")
+2026-03-09 00:04:50.988 DEBUG testcase.TC005_All_Fields_Empty          - 7: verifyElementText(findTestObject("Object Repository/Register_Function/err_Password"), "Password is required")
+2026-03-09 00:04:51.253 DEBUG testcase.TC005_All_Fields_Empty          - 8: closeBrowser()
+2026-03-09 00:04:51.623 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/Register_Function/TC005_All_Fields_Empty
+2026-03-09 00:04:51.630 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2026-03-09 00:04:51.630 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/Register_Function/TC002_Invalid_Fullname
+2026-03-09 00:04:51.770 DEBUG testcase.TC002_Invalid_Fullname          - 1: baseUrl = baseUrlRegister
+2026-03-09 00:04:51.772 DEBUG testcase.TC002_Invalid_Fullname          - 2: openBrowser("")
+2026-03-09 00:04:51.777 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2026-03-09 00:04:51.779 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Mar 09, 2026 12:04:52 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 145, returning the closest version; found: 142; Please update to a Selenium version that supports CDP version 145
+2026-03-09 00:04:52.634 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = baba4b62189a184efc291d610015bc04
+2026-03-09 00:04:52.635 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 145.0.7632.160
+2026-03-09 00:04:52.636 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 10
+2026-03-09 00:04:52.636 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.34.0
+2026-03-09 00:04:52.638 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2026-03-09 00:04:52.691 DEBUG testcase.TC002_Invalid_Fullname          - 3: navigateToUrl(baseUrl)
+2026-03-09 00:04:52.743 DEBUG testcase.TC002_Invalid_Fullname          - 4: setText(findTestObject("Object Repository/Register_Function/txt_FullName"), "Phan Thanh Nguyệt1234")
+2026-03-09 00:04:54.568 DEBUG testcase.TC002_Invalid_Fullname          - 5: setText(findTestObject("Object Repository/Register_Function/txt_Email"), "changcoor7@gmail.com")
+2026-03-09 00:04:55.308 DEBUG testcase.TC002_Invalid_Fullname          - 6: setText(findTestObject("Object Repository/Register_Function/txt_Password"), "Password123@")
+2026-03-09 00:04:56.025 DEBUG testcase.TC002_Invalid_Fullname          - 7: click(findTestObject("Object Repository/Register_Function/btn_Register"))
+2026-03-09 00:04:56.399 DEBUG testcase.TC002_Invalid_Fullname          - 8: verifyElementText(findTestObject("Object Repository/Register_Function/err_FullName"), "Full name cannot contain numbers or special characters. Please enter letters only")
+2026-03-09 00:04:56.912 DEBUG testcase.TC002_Invalid_Fullname          - 9: closeBrowser()
+2026-03-09 00:04:57.247 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/Register_Function/TC002_Invalid_Fullname
+2026-03-09 00:04:57.251 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2026-03-09 00:04:57.252 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/Register_Function/TC003_Invalid_Email
+2026-03-09 00:04:57.350 DEBUG testcase.TC003_Invalid_Email             - 1: baseUrl = baseUrlRegister
+2026-03-09 00:04:57.353 DEBUG testcase.TC003_Invalid_Email             - 2: openBrowser("")
+2026-03-09 00:04:57.359 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2026-03-09 00:04:57.362 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Mar 09, 2026 12:04:58 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 145, returning the closest version; found: 142; Please update to a Selenium version that supports CDP version 145
+2026-03-09 00:04:58.186 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = bea63b1174b0397ce5ddd310f54ecc50
+2026-03-09 00:04:58.187 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 145.0.7632.160
+2026-03-09 00:04:58.188 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 10
+2026-03-09 00:04:58.188 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.34.0
+2026-03-09 00:04:58.189 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2026-03-09 00:04:58.211 DEBUG testcase.TC003_Invalid_Email             - 3: navigateToUrl(baseUrl)
+2026-03-09 00:04:58.261 DEBUG testcase.TC003_Invalid_Email             - 4: setText(findTestObject("Object Repository/Register_Function/txt_FullName"), "Phan Thanh Nguyệt")
+2026-03-09 00:04:59.871 DEBUG testcase.TC003_Invalid_Email             - 5: setText(findTestObject("Object Repository/Register_Function/txt_Email"), "changcoor@")
+2026-03-09 00:05:00.602 DEBUG testcase.TC003_Invalid_Email             - 6: setText(findTestObject("Object Repository/Register_Function/txt_Password"), "Password123@")
+2026-03-09 00:05:01.319 DEBUG testcase.TC003_Invalid_Email             - 7: click(findTestObject("Object Repository/Register_Function/btn_Register"))
+2026-03-09 00:05:01.726 DEBUG testcase.TC003_Invalid_Email             - 8: verifyElementText(findTestObject("Object Repository/Register_Function/err_Email"), "Email is invalid")
+2026-03-09 00:05:02.231 DEBUG testcase.TC003_Invalid_Email             - 9: closeBrowser()
+2026-03-09 00:05:02.611 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/Register_Function/TC003_Invalid_Email
+2026-03-09 00:05:02.615 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2026-03-09 00:05:02.615 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/Register_Function/TC004_Invalid_Password
+2026-03-09 00:05:02.712 DEBUG testcase.TC004_Invalid_Password          - 1: baseUrl = baseUrlRegister
+2026-03-09 00:05:02.714 DEBUG testcase.TC004_Invalid_Password          - 2: openBrowser("")
+2026-03-09 00:05:02.719 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2026-03-09 00:05:02.721 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Mar 09, 2026 12:05:03 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 145, returning the closest version; found: 142; Please update to a Selenium version that supports CDP version 145
+2026-03-09 00:05:03.537 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = deac0a7db475731ade1e53d3367af9ef
+2026-03-09 00:05:03.539 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 145.0.7632.160
+2026-03-09 00:05:03.539 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 10
+2026-03-09 00:05:03.540 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.34.0
+2026-03-09 00:05:03.540 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2026-03-09 00:05:03.559 DEBUG testcase.TC004_Invalid_Password          - 3: navigateToUrl(baseUrl)
+2026-03-09 00:05:03.601 DEBUG testcase.TC004_Invalid_Password          - 4: setText(findTestObject("Object Repository/Register_Function/txt_FullName"), "Phan Thanh Nguyệt")
+2026-03-09 00:05:05.357 DEBUG testcase.TC004_Invalid_Password          - 5: setText(findTestObject("Object Repository/Register_Function/txt_Email"), "changcoor7@gmail.com")
+2026-03-09 00:05:06.079 DEBUG testcase.TC004_Invalid_Password          - 6: setText(findTestObject("Object Repository/Register_Function/txt_Password"), "123456")
+2026-03-09 00:05:06.778 DEBUG testcase.TC004_Invalid_Password          - 7: click(findTestObject("Object Repository/Register_Function/btn_Register"))
+2026-03-09 00:05:07.149 DEBUG testcase.TC004_Invalid_Password          - 8: verifyElementText(findTestObject("Object Repository/Register_Function/err_Password"), "Password must be at least 6 characters and include both letters and numbers")
+2026-03-09 00:05:07.653 DEBUG testcase.TC004_Invalid_Password          - 9: closeBrowser()
+2026-03-09 00:05:07.823 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/Register_Function/TC004_Invalid_Password
+2026-03-09 00:05:07.827 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2026-03-09 00:05:07.827 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/Register_Function/TC006_Email_Already_Exists
+2026-03-09 00:05:07.956 DEBUG testcase.TC006_Email_Already_Exists      - 1: baseUrl = baseUrlRegister
+2026-03-09 00:05:07.958 DEBUG testcase.TC006_Email_Already_Exists      - 2: openBrowser("")
+2026-03-09 00:05:07.962 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2026-03-09 00:05:07.963 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Mar 09, 2026 12:05:08 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 145, returning the closest version; found: 142; Please update to a Selenium version that supports CDP version 145
+2026-03-09 00:05:08.764 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = dfe9f1a2956a19019911cbceaa757dc6
+2026-03-09 00:05:08.764 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 145.0.7632.160
+2026-03-09 00:05:08.765 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 10
+2026-03-09 00:05:08.765 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.34.0
+2026-03-09 00:05:08.765 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2026-03-09 00:05:08.779 DEBUG testcase.TC006_Email_Already_Exists      - 3: navigateToUrl(baseUrl)
+2026-03-09 00:05:09.339 DEBUG testcase.TC006_Email_Already_Exists      - 4: setText(findTestObject("Object Repository/Register_Function/txt_FullName"), "Phan Thanh Nguyệt")
+2026-03-09 00:05:10.341 DEBUG testcase.TC006_Email_Already_Exists      - 5: setText(findTestObject("Object Repository/Register_Function/txt_Email"), "changcoor7@gmail.com")
+2026-03-09 00:05:11.242 DEBUG testcase.TC006_Email_Already_Exists      - 6: setText(findTestObject("Object Repository/Register_Function/txt_Password"), "Password123@")
+2026-03-09 00:05:11.906 DEBUG testcase.TC006_Email_Already_Exists      - 7: click(findTestObject("Object Repository/Register_Function/btn_Register"))
+2026-03-09 00:05:12.267 DEBUG testcase.TC006_Email_Already_Exists      - 8: verifyElementText(findTestObject("Object Repository/Register_Function/msg_EmailExists"), "Email is already registered")
+2026-03-09 00:05:13.532 DEBUG testcase.TC006_Email_Already_Exists      - 9: closeBrowser()
+2026-03-09 00:05:13.702 INFO  c.k.katalon.core.main.TestCaseExecutor   - END Test Cases/Register_Function/TC006_Email_Already_Exists
+2026-03-09 00:05:13.706 INFO  c.k.katalon.core.main.TestCaseExecutor   - --------------------
+2026-03-09 00:05:13.707 INFO  c.k.katalon.core.main.TestCaseExecutor   - START Test Cases/Register_Function/TC001_Register_Success
+2026-03-09 00:05:13.837 DEBUG testcase.TC001_Register_Success          - 1: baseUrl = baseUrlRegister
+2026-03-09 00:05:13.838 DEBUG testcase.TC001_Register_Success          - 2: openBrowser("")
+2026-03-09 00:05:13.841 INFO  c.k.k.core.webui.driver.DriverFactory    - Starting 'Chrome' driver
+2026-03-09 00:05:13.842 INFO  c.k.k.core.webui.driver.DriverFactory    - Action delay is set to 0 milliseconds
+Mar 09, 2026 12:05:14 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 145, returning the closest version; found: 142; Please update to a Selenium version that supports CDP version 145
+2026-03-09 00:05:14.651 INFO  c.k.k.core.webui.driver.DriverFactory    - sessionId = 6fbb5d104ae33790d397049f9de6bf6f
+2026-03-09 00:05:14.651 INFO  c.k.k.core.webui.driver.DriverFactory    - browser = Chrome 145.0.7632.160
+2026-03-09 00:05:14.652 INFO  c.k.k.core.webui.driver.DriverFactory    - platform = Windows 10
+2026-03-09 00:05:14.652 INFO  c.k.k.core.webui.driver.DriverFactory    - seleniumVersion = 4.34.0
+2026-03-09 00:05:14.653 INFO  c.k.k.core.webui.driver.DriverFactory    - proxyInformation = ProxyInformation { proxyOption=NO_PROXY, proxyServerType=HTTP, username=, password=********, proxyServerAddress=, proxyServerPort=0, executionList="", isApplyToDesiredCapabilities=true }
+2026-03-09 00:05:14.672 DEBUG testcase.TC001_Register_Success          - 3: navigateToUrl(baseUrl)
+2026-03-09 00:05:15.293 DEBUG testcase.TC001_Register_Success          - 4: verifyElementVisible(findTestObject("Object Repository/Register_Function/hd_Register"))
+2026-03-09 00:05:15.761 DEBUG testcase.TC001_Register_Success          - 5: setText(findTestObject("Object Repository/Register_Function/txt_FullName"), "Phan Thanh Nguyệt")
+2026-03-09 00:05:16.567 DEBUG testcase.TC001_Register_Success          - 6: setText(findTestObject("Object Repository/Register_Function/txt_Email"), "chang.coor26@student.passerellesnumeriques.org")
+2026-03-09 00:05:17.434 DEBUG testcase.TC001_Register_Success          - 7: setText(findTestObject("Object Repository/Register_Function/txt_Password"), "Password123@")
+2026-03-09 00:05:18.244 DEBUG testcase.TC001_Register_Success          - 8: click(findTestObject("Object Repository/Register_Function/btn_TogglePassword"))
+2026-03-09 00:05:18.620 DEBUG testcase.TC001_Register_Success          - 9: verifyElementAttributeValue(findTestObject("Object Repository/Register_Function/txt_Password"), "type", "text", 5)
+2026-03-09 00:05:19.139 DEBUG testcase.TC001_Register_Success          - 10: click(findTestObject("Object Repository/Register_Function/btn_TogglePassword"))
+2026-03-09 00:05:19.489 DEBUG testcase.TC001_Register_Success          - 11: verifyElementAttributeValue(findTestObject("Object Repository/Register_Function/txt_Password"), "type", "password", 5)
+2026-03-09 00:05:19.970 DEBUG testcase.TC001_Register_Success          - 12: click(findTestObject("Object Repository/Register_Function/btn_Register"))
+2026-03-09 00:05:20.328 DEBUG testcase.TC001_Register_Success          - 13: waitForElementVisible(findTestObject("Object Repository/Register_Function/msg_RegisterSuccess"), 5)
+2026-03-09 00:05:25.588 WARN  k.k.c.w.k.b.WaitForElementVisibleKeyword - Web element with id: 'Object Repository/Register_Function/msg_RegisterSuccess' located by 'By.xpath: //div[contains(text(), 'Account created successfully')]' not found
+2026-03-09 00:05:25.590 DEBUG testcase.TC001_Register_Success          - 14: verifyMatch(getText(findTestObject("Object Repository/Login_Function/hd_Login")), "Welcome back!", false)
+Mar 09, 2026 12:05:29 AM org.openqa.selenium.remote.http.WebSocket$Listener onError
+WARNING: Connection reset
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at java.net.http/jdk.internal.net.http.SocketTube.readAvailable(SocketTube.java:1170)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.read(SocketTube.java:833)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowTask.run(SocketTube.java:181)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler$SchedulableTask.run(SequentialScheduler.java:230)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:303)
+	at java.net.http/jdk.internal.net.http.common.SequentialScheduler.runOrSchedule(SequentialScheduler.java:256)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$InternalReadSubscription.signalReadable(SocketTube.java:774)
+	at java.net.http/jdk.internal.net.http.SocketTube$InternalReadPublisher$ReadEvent.signalEvent(SocketTube.java:957)
+	at java.net.http/jdk.internal.net.http.SocketTube$SocketFlowEvent.handle(SocketTube.java:253)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.handleEvent(HttpClientImpl.java:984)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.lambda$run$3(HttpClientImpl.java:939)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.net.http/jdk.internal.net.http.HttpClientImpl$SelectorManager.run(HttpClientImpl.java:939)
+
