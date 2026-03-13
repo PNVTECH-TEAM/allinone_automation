@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC002_Invalid_Email_Format</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>95c6c193-d273-4c91-892c-fd8a8e5bd858</testCaseGuid>
+</TestCaseEntity>
