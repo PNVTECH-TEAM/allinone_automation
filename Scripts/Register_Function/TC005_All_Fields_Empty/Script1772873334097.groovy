@@ -21,6 +21,8 @@ String baseUrl = GlobalVariable.baseUrlRegister
 
 WebUI.openBrowser('')
 
+WebUI.setViewPortSize(390, 844)
+
 WebUI.navigateToUrl(baseUrl)
 
 WebUI.click(findTestObject('Object Repository/Register_Function/btn_Register'))

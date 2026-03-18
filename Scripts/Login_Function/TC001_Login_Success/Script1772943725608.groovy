@@ -21,6 +21,8 @@ String baseUrl = GlobalVariable.baseUrlLogin
 
 WebUI.openBrowser('')
 
+WebUI.setViewPortSize(390, 844)
+
 WebUI.navigateToUrl(baseUrl)
 
 WebUI.verifyElementVisible(findTestObject('Object Repository/Login_Function/hd_Login'))
@@ -56,8 +58,7 @@ WebUI.waitForElementVisible(findTestObject('Object Repository/Login_Function/msg
 
 WebUI.verifyMatch(
 	WebUI.getUrl(),
-	'http://localhost:5173/homePage',
+	'http://localhost:5001/homePage',
 	false
 )
 
-WebUI.closeBrowser()

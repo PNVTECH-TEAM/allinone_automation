@@ -21,6 +21,8 @@ String baseUrl = GlobalVariable.baseUrlLogin
 
 WebUI.openBrowser('')
 
+WebUI.setViewPortSize(390, 844)
+
 WebUI.navigateToUrl(baseUrl)
 
 WebUI.setText(findTestObject('Object Repository/Login_Function/txt_Email'), 'changcoor7@')

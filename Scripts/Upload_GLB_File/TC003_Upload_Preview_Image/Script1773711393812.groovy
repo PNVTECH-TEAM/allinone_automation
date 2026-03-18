@@ -17,24 +17,43 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-String baseUrl = GlobalVariable.baseUrlRegister
+WebUI.callTestCase(findTestCase('Test Cases/Login_Function/TC001_Login_Success'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.openBrowser('')
+String baseUrl = GlobalVariable.baseUrlUpload
 
-WebUI.setViewPortSize(390, 844)
+// Upload file
+String imagePath = 'C:\\Users\\admin\\Downloads\\fish.jpg'
+
+WebUI.setViewPortSize(844, 390)
 
 WebUI.navigateToUrl(baseUrl)
 
-WebUI.setText(findTestObject('Object Repository/Register_Function/txt_FullName'), 'Trần Thanh Nguyệt')
-WebUI.setText(findTestObject('Object Repository/Register_Function/txt_Email'), 'chang.coor26@student.passerellesnumeriques.org')
-WebUI.setText(findTestObject('Object Repository/Register_Function/txt_Password'), 'Password123@')
+WebUI.click(findTestObject('Object Repository/Upload_GLB_File/btn_ExplorerToggle'))
+WebUI.click(findTestObject('Object Repository/Upload_GLB_File/btn_OpenUpload'))
+WebUI.click(findTestObject('Object Repository/Upload_GLB_File/btn_ExplorerToggleActive'))
 
-WebUI.click(findTestObject('Object Repository/Register_Function/btn_Register'))
+WebUI.verifyElementVisible(findTestObject('Object Repository/Upload_GLB_File/hd_TitleUploadFile'))
 
-//Verify Email Exists
-WebUI.verifyElementText(
-    findTestObject('Object Repository/Register_Function/msg_EmailExists'),
-    'Email is already registered'
-)
+// ===== UPLOAD IMAGE =====
 
-WebUI.closeBrowser()
+// B1: lấy input file image
+TestObject inputImage = findTestObject('Object Repository/Upload_GLB_File/btn_UploadPreviewImage')
+
+// B2: lấy WebElement thật
+def element = WebUI.findWebElement(inputImage)
+
+// B3: remove hidden
+WebUI.executeJavaScript("arguments[0].style.display='block';", Arrays.asList(element))
+
+// B4: upload file
+WebUI.uploadFile(inputImage, imagePath)
+
+// ===== VERIFY =====
+
+// wait UI update
+WebUI.delay(2)
+
+// verify preview image hiển thị (tùy UI của bạn)
+WebUI.verifyElementVisible(findTestObject('Object Repository/Upload_GLB_File/txt_ImageFileName'))
+
+

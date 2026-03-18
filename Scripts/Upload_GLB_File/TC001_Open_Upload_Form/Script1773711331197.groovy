@@ -17,24 +17,22 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-String baseUrl = GlobalVariable.baseUrlRegister
+WebUI.callTestCase(findTestCase('Test Cases/Login_Function/TC001_Login_Success'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.openBrowser('')
+String baseUrl = GlobalVariable.baseUrlUpload
 
-WebUI.setViewPortSize(390, 844)
+
+WebUI.setViewPortSize(844, 390)
 
 WebUI.navigateToUrl(baseUrl)
 
-WebUI.setText(findTestObject('Object Repository/Register_Function/txt_FullName'), 'Trần Thanh Nguyệt')
-WebUI.setText(findTestObject('Object Repository/Register_Function/txt_Email'), 'chang.coor26@student.passerellesnumeriques.org')
-WebUI.setText(findTestObject('Object Repository/Register_Function/txt_Password'), 'Password123@')
+WebUI.click(findTestObject('Object Repository/Upload_GLB_File/btn_ExplorerToggle'))
 
-WebUI.click(findTestObject('Object Repository/Register_Function/btn_Register'))
+WebUI.verifyElementVisible(findTestObject('Object Repository/Upload_GLB_File/hd_AquaticExplorer'))
 
-//Verify Email Exists
-WebUI.verifyElementText(
-    findTestObject('Object Repository/Register_Function/msg_EmailExists'),
-    'Email is already registered'
-)
+WebUI.click(findTestObject('Object Repository/Upload_GLB_File/btn_OpenUpload'))
 
-WebUI.closeBrowser()
+WebUI.click(findTestObject('Object Repository/Upload_GLB_File/btn_ExplorerToggleActive'))
+
+//Verify
+WebUI.verifyElementVisible(findTestObject('Object Repository/Upload_GLB_File/hd_TitleUploadFile'))
