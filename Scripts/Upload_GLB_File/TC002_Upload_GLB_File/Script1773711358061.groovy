@@ -17,48 +17,42 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-String baseUrl = GlobalVariable.baseUrlLogin
+WebUI.callTestCase(findTestCase('Test Cases/Login_Function/TC001_Login_Success'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.openBrowser('')
+String baseUrl = GlobalVariable.baseUrlUpload
 
-WebUI.setViewPortSize(390, 844)
+// Upload file
+String filePath = 'C:\\Users\\admin\\Downloads\\redcoral.glb'
+
+
+WebUI.setViewPortSize(844, 390)
 
 WebUI.navigateToUrl(baseUrl)
 
-WebUI.verifyElementVisible(findTestObject('Object Repository/Login_Function/hd_Login'))
+WebUI.click(findTestObject('Object Repository/Upload_GLB_File/btn_ExplorerToggle'))
 
-WebUI.setText(findTestObject('Object Repository/Login_Function/txt_Email'), 'changcoor7@gmail.com')
+WebUI.verifyElementVisible(findTestObject('Object Repository/Upload_GLB_File/hd_AquaticExplorer'))
 
-WebUI.setText(findTestObject('Object Repository/Login_Function/txt_Password'), 'Password123@')
+WebUI.click(findTestObject('Object Repository/Upload_GLB_File/btn_OpenUpload'))
 
-// Show Password
-WebUI.click(findTestObject('Object Repository/Login_Function/btn_TogglePassword'))
+WebUI.click(findTestObject('Object Repository/Upload_GLB_File/btn_ExplorerToggleActive'))
 
-WebUI.verifyElementAttributeValue(
-	findTestObject('Object Repository/Login_Function/txt_Password'),
-	'type',
-	'text',
-	5
-)
+//Verify
+WebUI.verifyElementVisible(findTestObject('Object Repository/Upload_GLB_File/hd_TitleUploadFile'))
 
-// Hide Password
-WebUI.click(findTestObject('Object Repository/Login_Function/btn_TogglePassword'))
+//Upload
+TestObject inputGLB = findTestObject('Object Repository/Upload_GLB_File/btn_UploadGLB')
+def element = WebUI.findWebElement(inputGLB)
 
-WebUI.verifyElementAttributeValue(
-	findTestObject('Object Repository/Login_Function/txt_Password'),
-	'type',
-	'password',
-	5
-)
+// B3: remove hidden
+WebUI.executeJavaScript("arguments[0].style.display='block';", Arrays.asList(element))
 
-WebUI.click(findTestObject('Object Repository/Login_Function/btn_Login'))
+// B4: upload file
+WebUI.uploadFile(inputGLB, filePath)
 
-//Verify login success
-WebUI.waitForElementVisible(findTestObject('Object Repository/Login_Function/msg_LoginSuccess'), 5)
-
+// ===== VERIFY =====
 WebUI.verifyMatch(
-	WebUI.getUrl(),
-	'http://localhost:5001/homePage',
-	false
+    WebUI.getAttribute(findTestObject('Object Repository/Upload_GLB_File/txt_AssetName'), 'value'),
+    'redcoral',
+    false
 )
-

@@ -17,48 +17,43 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-String baseUrl = GlobalVariable.baseUrlLogin
+WebUI.callTestCase(findTestCase('Test Cases/Login_Function/TC001_Login_Success'), [:], FailureHandling.STOP_ON_FAILURE)
 
-WebUI.openBrowser('')
+String baseUrl = GlobalVariable.baseUrlUpload
 
-WebUI.setViewPortSize(390, 844)
+// Upload file
+String imagePath = 'C:\\Users\\admin\\Downloads\\fish.jpg'
+
+WebUI.setViewPortSize(844, 390)
 
 WebUI.navigateToUrl(baseUrl)
 
-WebUI.verifyElementVisible(findTestObject('Object Repository/Login_Function/hd_Login'))
+WebUI.click(findTestObject('Object Repository/Upload_GLB_File/btn_ExplorerToggle'))
+WebUI.click(findTestObject('Object Repository/Upload_GLB_File/btn_OpenUpload'))
+WebUI.click(findTestObject('Object Repository/Upload_GLB_File/btn_ExplorerToggleActive'))
 
-WebUI.setText(findTestObject('Object Repository/Login_Function/txt_Email'), 'changcoor7@gmail.com')
+WebUI.verifyElementVisible(findTestObject('Object Repository/Upload_GLB_File/hd_TitleUploadFile'))
 
-WebUI.setText(findTestObject('Object Repository/Login_Function/txt_Password'), 'Password123@')
+// ===== UPLOAD IMAGE =====
 
-// Show Password
-WebUI.click(findTestObject('Object Repository/Login_Function/btn_TogglePassword'))
+// B1: lấy input file image
+TestObject inputImage = findTestObject('Object Repository/Upload_GLB_File/btn_UploadPreviewImage')
 
-WebUI.verifyElementAttributeValue(
-	findTestObject('Object Repository/Login_Function/txt_Password'),
-	'type',
-	'text',
-	5
-)
+// B2: lấy WebElement thật
+def element = WebUI.findWebElement(inputImage)
 
-// Hide Password
-WebUI.click(findTestObject('Object Repository/Login_Function/btn_TogglePassword'))
+// B3: remove hidden
+WebUI.executeJavaScript("arguments[0].style.display='block';", Arrays.asList(element))
 
-WebUI.verifyElementAttributeValue(
-	findTestObject('Object Repository/Login_Function/txt_Password'),
-	'type',
-	'password',
-	5
-)
+// B4: upload file
+WebUI.uploadFile(inputImage, imagePath)
 
-WebUI.click(findTestObject('Object Repository/Login_Function/btn_Login'))
+// ===== VERIFY =====
 
-//Verify login success
-WebUI.waitForElementVisible(findTestObject('Object Repository/Login_Function/msg_LoginSuccess'), 5)
+// wait UI update
+WebUI.delay(2)
 
-WebUI.verifyMatch(
-	WebUI.getUrl(),
-	'http://localhost:5001/homePage',
-	false
-)
+// verify preview image hiển thị (tùy UI của bạn)
+WebUI.verifyElementVisible(findTestObject('Object Repository/Upload_GLB_File/txt_ImageFileName'))
+
 
