@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC001_Select_Size_With_Version</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>7b3329b5-5989-41aa-9fc0-f04dc0455a8c</testCaseGuid>
+</TestCaseEntity>
