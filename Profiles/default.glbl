@@ -20,7 +20,7 @@
    </GlobalVariableEntity>
    <GlobalVariableEntity>
       <description></description>
-      <initValue>'http://localhost:5001/aquarium3d'</initValue>
+      <initValue>'https://www.aquascape-pnv.shop/aquarium3d'</initValue>
       <name>baseUrlUpload</name>
       <protected>false</protected>
       <valueType>STRING</valueType>

@@ -21,7 +21,7 @@ String baseUrl = GlobalVariable.baseUrlLogin
 
 WebUI.openBrowser('')
 
-WebUI.setViewPortSize(390, 844)
+WebUI.setViewPortSize(390, 944)
 
 WebUI.navigateToUrl(baseUrl)
 

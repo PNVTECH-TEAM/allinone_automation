@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC001_AI_Fish_Doctor_Success</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>66ba6332-5042-4f3e-a506-17a7c1e1c6ef</testCaseGuid>
+</TestCaseEntity>

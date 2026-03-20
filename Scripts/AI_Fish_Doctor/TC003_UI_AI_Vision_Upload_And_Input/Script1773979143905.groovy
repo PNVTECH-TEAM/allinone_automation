@@ -17,22 +17,25 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+// LOGIN
 WebUI.callTestCase(findTestCase('Test Cases/Login_Function/TC001_Login_Success'), [:], FailureHandling.STOP_ON_FAILURE)
 
-String baseUrl = GlobalVariable.baseUrlUpload
+// Path Image
+String imagePath = 'C:\\Users\\admin\\Downloads\\fishcheck.jpg'
 
+// Navigate
+WebUI.click(findTestObject('Object Repository/AI_Fish_Doctor/btn_CheckFish'))
+WebUI.verifyElementText(findTestObject('Object Repository/AI_Fish_Doctor/hd_FishTankHealth'), 'Fish Tank Health')
 
-WebUI.setViewPortSize(844, 390)
+WebUI.click(findTestObject('Object Repository/AI_Fish_Doctor/btn_StartCheck'))
+WebUI.verifyElementText(findTestObject('Object Repository/AI_Fish_Doctor/hd_AIVision'), 'AI Vision')
 
-WebUI.navigateToUrl(baseUrl)
+// Upload image
+WebUI.uploadFile(findTestObject('Object Repository/AI_Fish_Doctor/btn_UploadGallery'), imagePath)
 
-WebUI.click(findTestObject('Object Repository/Upload_GLB_File/btn_ExplorerToggle'))
+// Input symptoms
+WebUI.setText(findTestObject('Object Repository/AI_Fish_Doctor/txa_DescribleAdditionalSymptoms'), 
+'White cotton-like patches appear on the body, fins, or mouth')
 
-WebUI.verifyElementVisible(findTestObject('Object Repository/Upload_GLB_File/hd_AquaticExplorer'))
-
-WebUI.click(findTestObject('Object Repository/Upload_GLB_File/btn_OpenUpload'))
-
-WebUI.click(findTestObject('Object Repository/Upload_GLB_File/btn_ExplorerToggleActive'))
-
-//Verify
-WebUI.verifyElementVisible(findTestObject('Object Repository/Upload_GLB_File/hd_TitleUploadFile'))
+// Verify Scan enabled
+WebUI.verifyElementClickable(findTestObject('Object Repository/AI_Fish_Doctor/btn_AIVisionScanEnabled'))

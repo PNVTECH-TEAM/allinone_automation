@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC002_Validate_Scan_Without_Image</name>
+   <tag></tag>
+   <comment></comment>
+   <recordOption>OTHER</recordOption>
+   <testCaseGuid>58ef1f97-f449-41dc-86fe-73c131ff8148</testCaseGuid>
+</TestCaseEntity>

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>TC004_Successful_Asset_Upload</name>
+   <name>TC003_UI_AI_Vision_Upload_And_Input</name>
    <tag></tag>
    <comment></comment>
    <recordOption>OTHER</recordOption>
-   <testCaseGuid>4413e6a5-7958-41bf-a6d2-508566d3d353</testCaseGuid>
+   <testCaseGuid>55335695-3928-4bfa-a6ad-391c9a655bb4</testCaseGuid>
 </TestCaseEntity>

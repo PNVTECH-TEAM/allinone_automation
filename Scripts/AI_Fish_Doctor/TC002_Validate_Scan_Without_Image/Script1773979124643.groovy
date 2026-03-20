@@ -17,42 +17,18 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
+// LOGIN
 WebUI.callTestCase(findTestCase('Test Cases/Login_Function/TC001_Login_Success'), [:], FailureHandling.STOP_ON_FAILURE)
 
-String baseUrl = GlobalVariable.baseUrlUpload
+// Navigate to AI Fish Doctor
+WebUI.click(findTestObject('Object Repository/AI_Fish_Doctor/btn_CheckFish'))
+WebUI.verifyElementText(findTestObject('Object Repository/AI_Fish_Doctor/hd_FishTankHealth'), 'Fish Tank Health')
 
-// Upload file
-String filePath = 'C:\\Users\\admin\\Downloads\\redcoral.glb'
+WebUI.click(findTestObject('Object Repository/AI_Fish_Doctor/btn_StartCheck'))
+WebUI.verifyElementText(findTestObject('Object Repository/AI_Fish_Doctor/hd_AIVision'), 'AI Vision')
 
+// Verify Scan button is disabled
+WebUI.verifyElementNotClickable(findTestObject('Object Repository/AI_Fish_Doctor/btn_AIVisionScanDisabled'))
 
-WebUI.setViewPortSize(844, 390)
+WebUI.closeBrowser()
 
-WebUI.navigateToUrl(baseUrl)
-
-WebUI.click(findTestObject('Object Repository/Upload_GLB_File/btn_ExplorerToggle'))
-
-WebUI.verifyElementVisible(findTestObject('Object Repository/Upload_GLB_File/hd_AquaticExplorer'))
-
-WebUI.click(findTestObject('Object Repository/Upload_GLB_File/btn_OpenUpload'))
-
-WebUI.click(findTestObject('Object Repository/Upload_GLB_File/btn_ExplorerToggleActive'))
-
-//Verify
-WebUI.verifyElementVisible(findTestObject('Object Repository/Upload_GLB_File/hd_TitleUploadFile'))
-
-//Upload
-TestObject inputGLB = findTestObject('Object Repository/Upload_GLB_File/btn_UploadGLB')
-def element = WebUI.findWebElement(inputGLB)
-
-// B3: remove hidden
-WebUI.executeJavaScript("arguments[0].style.display='block';", Arrays.asList(element))
-
-// B4: upload file
-WebUI.uploadFile(inputGLB, filePath)
-
-// ===== VERIFY =====
-WebUI.verifyMatch(
-    WebUI.getAttribute(findTestObject('Object Repository/Upload_GLB_File/txt_AssetName'), 'value'),
-    'redcoral',
-    false
-)
